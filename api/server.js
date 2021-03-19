@@ -1,9 +1,11 @@
 const express = require('express');
 
-const db = require('../data/db-config');
+const RecipeRouter = require('./router/router');
 
 const server = express();
 
 server.use(express.json());
+
+server.use('/api/recipes', RecipeRouter);
 
 module.exports = server;

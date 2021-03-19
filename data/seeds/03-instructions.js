@@ -1,10 +1,10 @@
 exports.seed = function (knex) {
   // Deletes ALL existing entries
-  return knex('table_name')
+  return knex('instructions')
     .del()
     .then(function () {
       // Inserts seed entries
-      return knex('table_name').insert([
+      return knex('instructions').insert([
         {
           instructions: 'Ground round aliquip picanha pork chop minim',
           step_number: 1,

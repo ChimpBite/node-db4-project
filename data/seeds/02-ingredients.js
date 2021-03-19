@@ -1,10 +1,10 @@
-
-exports.seed = function(knex) {
+exports.seed = function (knex) {
   // Deletes ALL existing entries
-  return knex('table_name').del()
+  return knex('ingredients')
+    .del()
     .then(function () {
       // Inserts seed entries
-      return knex('table_name').insert([
+      return knex('ingredients').insert([
         { ingredient: 'olive oil', recipe_id: 1 },
         { ingredient: 'spaghetti sauce', recipe_id: 1 },
         { ingredient: 'pasta', recipe_id: 1 },
